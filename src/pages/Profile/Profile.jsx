@@ -18,7 +18,8 @@ const Profile = () => {
 
     const fetchUserProfile = async () => {
         try {
-            const res = await axios.get(`http://localhost:4000/api/user/profile/${userId}`, {
+            const res = await axios.get(`
+https://cc-backend-9fq0.onrender.com/api/user/profile/${userId}`, {
                 headers: { token }
             });
             if (res.data.success) {
@@ -36,7 +37,8 @@ const Profile = () => {
     const updateProfile = async () => {
         try {
             setLoading(true);
-            const res = await axios.put('http://localhost:4000/api/user/profile', editData, { headers: { token } });
+            const res = await axios.put('
+https://cc-backend-9fq0.onrender.com/api/user/profile', editData, { headers: { token } });
             setLoading(false);
             if (res.data.success) {
                 alert('Profile updated successfully!');
@@ -61,7 +63,8 @@ const Profile = () => {
         try {
             setLoading(true);
             const response = await axios.put(
-                'http://localhost:4000/api/user/changepassword',
+                '
+https://cc-backend-9fq0.onrender.com/api/user/changepassword',
                 { currentPassword, newPassword, userId }
             );
             setLoading(false);
