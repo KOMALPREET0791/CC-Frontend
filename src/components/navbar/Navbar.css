@@ -1,0 +1,126 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.brand a {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff5722;
+}
+
+.brand span {
+    color: #222;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar-menu a,
+.navbar-menu li {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.navbar-menu .active,
+.navbar-menu li:hover {
+    color: #ff5722;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-right button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 26px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navbar-right button:hover {
+    background-color: #e0491d;
+}
+
+.navbar-cart-icon {
+    position: relative;
+}
+
+.navbar-cart-icon .dot {
+    position: absolute;
+    top: -2px;
+    right: -6px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.navbar-profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* Dropdown initially hidden */
+.nav-profile-dropdown {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 10;
+    min-width: 160px;
+}
+
+/* Show dropdown on .show class (from state) */
+.nav-profile-dropdown.show {
+    display: flex;
+}
+
+.nav-profile-dropdown li {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown li:hover {
+    background-color: #ff5722;
+    color: white;
+}
+
+.nav-profile-dropdown img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}

@@ -1,0 +1,94 @@
+/* Main Section Style */
+.app-download {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f8b400, #f06292); /* Gradient Background */
+    padding: 60px 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  
+  /* Container for Content */
+  .app-download-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Main Heading */
+  .app-download-heading {
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .app-download-heading .highlight {
+    color: #f06292;
+  }
+  
+  /* Call to Action Text */
+  .cta-text {
+    font-size: clamp(14px, 2.5vw, 18px);
+    margin-bottom: 30px;
+    color: #555;
+    font-weight: 400;
+  }
+  
+  /* Button Section */
+  .app-download-platforms {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* App Store Button Image */
+  .platform-img {
+    width: clamp(120px, 30vw, 180px);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .platform-img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+    animation: bounce 0.6s ease-in-out infinite;
+  }
+  
+  /* Keyframes for Button Bounce */
+  @keyframes bounce {
+    0% {
+      transform: scale(1.08);
+    }
+    50% {
+      transform: scale(1.12);
+    }
+    100% {
+      transform: scale(1.08);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .app-download {
+      padding: 50px 10px;
+    }
+    
+    .app-download-container {
+      padding: 20px;
+    }
+  
+    .platform-img {
+      width: 150px;
+    }
+  }
+  

@@ -1,0 +1,84 @@
+.footer {
+    background-color: #1a1a1a;
+    color: #eee;
+    padding: 60px 10vw 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 100px;
+}
+
+.footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+.footer-logo span {
+    color: #fff;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-section li:hover {
+    color: #ff5722;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-icons img {
+    width: 32px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: #444;
+    margin: 20px 0;
+}
+
+.footer-copy {
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+}
