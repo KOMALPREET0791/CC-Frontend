@@ -13,7 +13,7 @@ const Verify = () => {
      const verifyPayment = async()=>{
             const response = await axios.post(url+"/api/order/verify",{success , orderId});
             if(response.data.success){
-                    navigate("/https://cc-frontend-rsp0.onrender.com/myorders")
+                    navigate("/myorders")
             }
             else{
                 navigate("/")
