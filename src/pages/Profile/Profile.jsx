@@ -5,7 +5,7 @@ import './Profile.css';
 import { FiEye, FiEyeOff } from 'react-icons/fi'; // Import eye icons from react-icons
 
 const Profile = () => {
-    const { token } = useContext(StoreContext);
+    const {url, token } = useContext(StoreContext);
     const [user, setUser] = useState('');
     const userId = localStorage.getItem("userId")
     const [editData, setEditData] = useState({ name: '', email: user.email, userId: userId });
@@ -18,7 +18,7 @@ const Profile = () => {
 
     const fetchUserProfile = async () => {
         try {
-            const res = await axios.get(`https://cc-backend-9fq0.onrender.com/api/user/profile/${userId}`, {
+            const res = await axios.get(url+`/api/user/profile/${userId}`, {
                 headers: { token }
             });
             if (res.data.success) {
@@ -36,8 +36,7 @@ const Profile = () => {
     const updateProfile = async () => {
         try {
             setLoading(true);
-            const res = await axios.put('
-https://cc-backend-9fq0.onrender.com/api/user/profile', editData, { headers: { token } });
+            const res = await axios.put(url+'/api/user/profile', editData, { headers: { token } });
                 setLoading(false);
             if (res.data.success) {
                 alert('Profile updated successfully!');
@@ -62,8 +61,7 @@ https://cc-backend-9fq0.onrender.com/api/user/profile', editData, { headers: { t
         try {
             setLoading(true);
             const response = await axios.put(
-                '
-https://cc-backend-9fq0.onrender.com/api/user/changepassword',
+                url+'/api/user/changepassword',
                 { currentPassword, newPassword, userId }
             );
             setLoading(false);
