@@ -7,8 +7,8 @@ import { FiEye, FiEyeOff } from 'react-icons/fi'; // Import eye icons from react
 const Profile = () => {
     const { token } = useContext(StoreContext);
     const [user, setUser] = useState('');
-    const userId=localStorage.getItem("userId")
-    const [editData, setEditData] = useState({ name: '', email: user.email, userId:userId });
+    const userId = localStorage.getItem("userId")
+    const [editData, setEditData] = useState({ name: '', email: user.email, userId: userId });
     const [passwords, setPasswords] = useState({ currentPassword: '', newPassword: '', confirmPassword: '' });
     const [loading, setLoading] = useState(false);
 
@@ -18,8 +18,7 @@ const Profile = () => {
 
     const fetchUserProfile = async () => {
         try {
-            const res = await axios.get(`
-https://cc-backend-9fq0.onrender.com/api/user/profile/${userId}`, {
+            const res = await axios.get(`https://cc-backend-9fq0.onrender.com/api/user/profile/${userId}`, {
                 headers: { token }
             });
             if (res.data.success) {
@@ -39,7 +38,7 @@ https://cc-backend-9fq0.onrender.com/api/user/profile/${userId}`, {
             setLoading(true);
             const res = await axios.put('
 https://cc-backend-9fq0.onrender.com/api/user/profile', editData, { headers: { token } });
-            setLoading(false);
+                setLoading(false);
             if (res.data.success) {
                 alert('Profile updated successfully!');
             } else {
